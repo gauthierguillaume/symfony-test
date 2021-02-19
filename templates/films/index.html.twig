@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+<div class="container">
+    {% for film in films %}
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+                <h5 class="card-title" style="">{{ film.nom }}</h5>
+                <p class="card-text">{{ film.synopsis }}</p>
+            </div>
+            <div class="card-footer text-muted">
+                {{ film.date | date("m/d/Y") }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
